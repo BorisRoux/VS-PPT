@@ -17,6 +17,8 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>14.0</OldToolsVersion>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition="'$(RazzleBuild)'=='true'">
     <AssemblyAttributeClsCompliant>false</AssemblyAttributeClsCompliant>
@@ -47,18 +49,6 @@
       <Private>False</Private>
       <HintPath>Roslyn\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.CoreUtility">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Text.Data">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Text.Logic">
-      <Private>False</Private>
-      <SpecificVersion>false</SpecificVersion>
-    </Reference>
     <Reference Include="PresentationCore">
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
@@ -71,6 +61,7 @@
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Threading.Tasks">
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
@@ -121,6 +112,11 @@
       <Private>False</Private>
       <IncludeOutputGroupsInVSIX>VSIXContainerProjectOutputGroup</IncludeOutputGroupsInVSIX>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Text.Logic">
+      <Version>17.0.491</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(_NTDRIVE)$(_NTROOT)\tools\Microsoft.DevDiv.targets" Condition="'$(RazzleToolPath)'!=''" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" Condition="'$(RazzleBuild)'==''" />

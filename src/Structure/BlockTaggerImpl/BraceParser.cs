@@ -76,7 +76,7 @@ namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
                 }
 
                 if (token.IsCancellationRequested)
-                    return null;
+                    return Task.FromResult<CodeBlock>(null);
             }
 
             while (blockOpenings.Count > 0)

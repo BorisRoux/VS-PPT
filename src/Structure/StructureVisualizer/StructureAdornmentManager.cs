@@ -167,14 +167,14 @@ namespace Microsoft.VisualStudio.PowerTools.StructureVisualizer
             {
                 _redrawAllQueued = true;
 
-                _view.VisualElement.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(() =>
-                                                                                            {
-                                                                                                if (_redrawAllQueued)
-                                                                                                {
-                                                                                                    _redrawAllQueued = false;
-                                                                                                    this.RedrawAllAdornmentsImmeditately();
-                                                                                                }
-                                                                                            }));
+				_ = _view.VisualElement.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(() =>
+																							  {
+																								  if (_redrawAllQueued)
+																								  {
+																									  _redrawAllQueued = false;
+																									  this.RedrawAllAdornmentsImmeditately();
+																								  }
+																							  }));
             }
         }
 

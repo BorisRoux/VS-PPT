@@ -26,13 +26,13 @@ namespace Microsoft.PowerToolsEx.BlockTagger.Implementation
             /// <remarks>The constructor must be called from the UI thread.</remarks>
             public BackgroundScan(ITextSnapshot snapshot, IParser parser, CompletionCallback completionCallback)
             {
-                Task.Run(async delegate
-                {
-                    CodeBlock newRoot = await parser.ParseAsync(snapshot, this.CancellationSource.Token);
+				_ = Task.Run(async delegate
+				  {
+					  CodeBlock newRoot = await parser.ParseAsync(snapshot, this.CancellationSource.Token);
 
-                    if ((newRoot != null) && !this.CancellationSource.Token.IsCancellationRequested)
-                        completionCallback(newRoot);
-                });
+					  if ((newRoot != null) && !this.CancellationSource.Token.IsCancellationRequested)
+						  completionCallback(newRoot);
+				  });
             }
 
             public void Cancel()

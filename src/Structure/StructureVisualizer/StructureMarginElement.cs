@@ -4,7 +4,6 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using Microsoft.PowerToolsEx.BlockTagger;
-using Microsoft.VisualStudio.TelemetryForPPT;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Text.Editor;
@@ -38,7 +37,6 @@ namespace Microsoft.VisualStudio.PowerTools.StructureVisualizer
         private static DateTime s_lastTimeChanged = DateTime.MaxValue;
 
         private static TimeSpan s_elapsedTime = TimeSpan.Zero;
-        private static ITelemetrySession s_telemetrySession;
 
         /// <summary>
         /// Constructor for the StructureMarginElement.
@@ -157,13 +155,6 @@ namespace Microsoft.VisualStudio.PowerTools.StructureVisualizer
 
                 if ((!StructureMarginElement.s_logged) && (StructureMarginElement.s_elapsedTime > StructureMarginElement.s_tipReportingDelay))
                 {
-                    if (StructureMarginElement.s_telemetrySession == null)
-                    {
-                        StructureMarginElement.s_telemetrySession = TelemetrySessionForPPT.Create(typeof(StructureMarginElement).Assembly);
-                    }
-
-                    StructureMarginElement.s_telemetrySession.PostEvent(StructureMarginElement.s_lastKey);
-
                     StructureMarginElement.s_elapsedTime = TimeSpan.Zero;
                     StructureMarginElement.s_logged = true;
                 }
