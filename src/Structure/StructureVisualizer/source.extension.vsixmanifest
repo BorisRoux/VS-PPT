@@ -1,16 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="StructureVisualizer2019.Jonathan.F4B54E0E-E967-4B12-9A35-A3E03F9D3938" Version="2019.0" Language="en-US" Publisher="Jonathan" />
-        <DisplayName>Structure Visualizer In Map Mode Scrollbar</DisplayName>
+        <Identity Id="StructureVisualizer2022.BorisRoux.4313E48A-D5D3-422B-9A8D-4C7338CD41E8" Version="2022.0" Language="en-US" Publisher="Boris Roux" />
+        <DisplayName>Structure Visualizer 2022 In Map Mode Scrollbar</DisplayName>
         <Description xml:space="preserve">This extension displays the block structure of code files in the map mode scroll bar.</Description>
         <License>license.txt</License>
         <PreviewImage>StructureVisualizer.png</PreviewImage>
     </Metadata>
     <Installation>
-        <InstallationTarget Id="Microsoft.VisualStudio.Community"  Version="[16.0,17.0)" />
-        <InstallationTarget Id="Microsoft.VisualStudio.Pro"        Version="[16.0,17.0)" />
-        <InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[16.0,17.0)" />
+        <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[17.0,18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[17.0,18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
+        <InstallationTarget Id="Microsoft.VisualStudio.Enterprise" Version="[17.0,18.0)">
+            <ProductArchitecture>amd64</ProductArchitecture>
+        </InstallationTarget>
     </Installation>
     <Dependencies>
         <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.7.2,)" />
@@ -21,7 +27,7 @@
         <Asset Type="Microsoft.VisualStudio.MefComponent" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%|" />
     </Assets>
     <Prerequisites>
-        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[16.0.28315.86,17.0)" DisplayName="Visual Studio core editor" />
+        <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[17.0,18.0)" DisplayName="Visual Studio core editor" />
     </Prerequisites>
 </PackageManifest>
 
