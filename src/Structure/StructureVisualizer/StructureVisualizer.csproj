@@ -74,10 +74,6 @@
       <Private>False</Private>
       <SpecificVersion>false</SpecificVersion>
     </Reference>
-    <ProjectReference Include="..\..\TelemetryForPPT\TelemetryForPPT.csproj">
-      <Project>{4334f78e-a249-4150-ae73-e99008db44a7}</Project>
-      <Name>TelemetryForPPT</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Options.cs" />

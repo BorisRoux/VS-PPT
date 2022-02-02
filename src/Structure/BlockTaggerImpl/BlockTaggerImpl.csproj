@@ -113,6 +113,11 @@
       <IncludeOutputGroupsInVSIX>VSIXContainerProjectOutputGroup</IncludeOutputGroupsInVSIX>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Text.Logic">
+      <Version>17.0.491</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(_NTDRIVE)$(_NTROOT)\tools\Microsoft.DevDiv.targets" Condition="'$(RazzleToolPath)'!=''" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" Condition="'$(RazzleBuild)'==''" />
 </Project>
