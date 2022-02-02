@@ -30,7 +30,6 @@
       <HintPath>..\packages\Microsoft.VisualStudio.CoreUtility.17.0.491\lib\net472\Microsoft.VisualStudio.CoreUtility.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.Shell.15.0, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.Threading, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.VisualStudio.Threading.17.0.63\lib\net472\Microsoft.VisualStudio.Threading.dll</HintPath>
     </Reference>
