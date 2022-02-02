@@ -1,5 +1,5 @@
 # Quick Notes
-If you are here for the Structure visualizer in the map mode scroll for Visual Studio 2022 extension, the .vsix download link is here: [TBC]
+If you are here for the Structure visualizer in the map mode scroll for Visual Studio 2022 extension, the .vsix download link is [here](https://github.com/BorisRoux/VS-PPT/releases/download/v2022.0/Microsoft.VisualStudio.PowerTools.StructureVisualizer.vsix)
 
 # History
 
