@@ -161,20 +161,21 @@ namespace Microsoft.VisualStudio.PowerTools.StructureVisualizer
             }
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "VSTHRD001:Avoid legacy thread switching APIs", Justification = "<Pending>")]
         private void RedrawAllAdornments()
         {
             if (!_redrawAllQueued)
             {
                 _redrawAllQueued = true;
 
-				_ = _view.VisualElement.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(() =>
-																							  {
-																								  if (_redrawAllQueued)
-																								  {
-																									  _redrawAllQueued = false;
-																									  this.RedrawAllAdornmentsImmeditately();
-																								  }
-																							  }));
+                _ = _view.VisualElement.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(() =>
+                {
+                    if (_redrawAllQueued)
+                    {
+                        _redrawAllQueued = false;
+                        this.RedrawAllAdornmentsImmeditately();
+                    }
+                }));
             }
         }
 
